@@ -327,6 +327,12 @@ foreach (subdir ${PROJECT_SRC_DIRECTORIES})
   add_subdirectory("${PROJECT_SOURCE_DIR}/src/${subdir}")
 endforeach()
 
+#------------------------
+# ortools
+#------------------------
+
+find_package(ortools CONFIG REQUIRED)
+target_link_libraries(vrprouting ortools::ortools)
 
 
 #-----------------------------------------------------------------------------
