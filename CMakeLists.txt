@@ -330,9 +330,10 @@ endforeach()
 #------------------------
 # ortools
 #------------------------
-
+$[[
 find_package(ortools CONFIG REQUIRED)
 target_link_libraries(vrprouting ortools::ortools)
+]]
 
 
 #-----------------------------------------------------------------------------
