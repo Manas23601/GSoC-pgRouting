@@ -1,13 +1,13 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sample Data &#8212; vrpRouting Manual (0.4-dev)</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -19,150 +19,31 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Concepts" href="concepts.html" />
-    <link rel="prev" title="Support" href="support.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
-
+    <link rel="prev" title="Support" href="support.html" /> 
   </head><body>
-
-  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html"><span><img src="_static/vrprouting.png"></span>
-          vrpRouting</a>
-        <span class="navbar-text navbar-version pull-left"><b>v0.4.0-dev</b></span>
+      <div class="header" role="banner"><img class="rightlogo" src="_static/vrprouting.png" alt="Logo"/><h1 class="heading"><a href="index.html">
+          <span>vrpRouting Manual (0.4-dev)</span></a></h1>
+        <h2 class="heading"><span>Sample Data</span></h2>
       </div>
-
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="support.html">Support</a></li>
-</ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sample Data</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="vrp_version.html">vrp_version</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vrp_full_version.html">vrp_full_version</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="official.html">Oficial functions</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="proposed.html">Proposed Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="experimental.html">Experimental Functions</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
-</ul>
-</ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Sample Data</a><ul>
-<li><a class="reference internal" href="#city-network">City Network</a></li>
-<li><a class="reference internal" href="#pgr-pickdeliver-data"><cite>pgr_PickDeliver</cite> data</a><ul>
-<li><a class="reference internal" href="#vehicles-table">Vehicles table</a></li>
-<li><a class="reference internal" href="#orders-table">Orders table</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#vrp-onedepot-data"><cite>vrp_oneDepot</cite> data</a></li>
-<li><a class="reference internal" href="#vroom-data">VROOM Data</a><ul>
-<li><a class="reference internal" href="#jobs">Jobs</a></li>
-<li><a class="reference internal" href="#jobs-time-windows">Jobs Time Windows</a></li>
-<li><a class="reference internal" href="#shipments">Shipments</a></li>
-<li><a class="reference internal" href="#shipments-time-windows">Shipments Time Windows</a></li>
-<li><a class="reference internal" href="#vehicles">Vehicles</a></li>
-<li><a class="reference internal" href="#breaks">Breaks</a></li>
-<li><a class="reference internal" href="#breaks-time-windows">Breaks Time Windows</a></li>
-<li><a class="reference internal" href="#matrix">Matrix</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#modified-vroom-data">Modified VROOM Data</a></li>
-<li><a class="reference internal" href="#images">Images</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="support.html" title="Previous Chapter: Support"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Support</span>
-    </a>
-  </li>
-  <li>
-    <a href="concepts.html" title="Next Chapter: Concepts"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Concepts &raquo;</span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
-          </ul>
-
-          
-            
-<form class="navbar-form navbar-right" action="search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
-        </div>
-    </div>
-  </div>
-
-<div class="container">
-  <div class="row">
-    <div class="body col-md-12 content" role="main">
+      <div class="topnav" role="navigation" aria-label="top navigation">
       
-  <section id="sample-data">
+        <p>
+        «&#160;&#160;<a href="support.html">Support</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="concepts.html">Concepts</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="sample-data">
 <h1>Sample Data<a class="headerlink" href="#sample-data" title="Permalink to this heading">¶</a></h1>
 <p>The documentation provides very simple example queries based on a small sample network.
 To be able to execute the sample queries, run the following SQL commands to create a table with a small network data set.</p>
-<section id="city-network">
+<div class="section" id="city-network">
 <h2>City Network<a class="headerlink" href="#city-network" title="Permalink to this heading">¶</a></h2>
 <p class="rubric">Create table</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">public</span><span class="o">.</span><span class="n">edge_table</span> <span class="p">(</span>
@@ -214,10 +95,10 @@ To be able to execute the sample queries, run the following SQL commands to crea
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">pgr_createTopology</span><span class="p">(</span><span class="s1">&#39;public.edge_table&#39;</span><span class="p">,</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">the_geom</span> <span class="o">=&gt;</span><span class="s1">&#39;geom&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="pgr-pickdeliver-data">
+</div>
+<div class="section" id="pgr-pickdeliver-data">
 <h2><cite>pgr_PickDeliver</cite> data<a class="headerlink" href="#pgr-pickdeliver-data" title="Permalink to this heading">¶</a></h2>
-<section id="vehicles-table">
+<div class="section" id="vehicles-table">
 <h3>Vehicles table<a class="headerlink" href="#vehicles-table" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 <span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">public</span><span class="o">.</span><span class="n">vehicles_1</span> <span class="p">(</span>
@@ -237,8 +118,8 @@ To be able to execute the sample queries, run the following SQL commands to crea
 
 </pre></div>
 </div>
-</section>
-<section id="orders-table">
+</div>
+<div class="section" id="orders-table">
 <h3>Orders table<a class="headerlink" href="#orders-table" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">public</span><span class="o">.</span><span class="n">orders_1</span> <span class="p">(</span>
     <span class="nb">id</span> <span class="n">BIGSERIAL</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
@@ -277,9 +158,9 @@ To be able to execute the sample queries, run the following SQL commands to crea
 
 </pre></div>
 </div>
-</section>
-</section>
-<section id="vrp-onedepot-data">
+</div>
+</div>
+<div class="section" id="vrp-onedepot-data">
 <h2><cite>vrp_oneDepot</cite> data<a class="headerlink" href="#vrp-onedepot-data" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 <span class="n">DROP</span> <span class="n">TABLE</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="n">public</span><span class="o">.</span><span class="n">solomon_100_RC_101</span> <span class="n">cascade</span><span class="p">;</span>
@@ -332,10 +213,10 @@ To be able to execute the sample queries, run the following SQL commands to crea
 <span class="n">FROM</span> <span class="n">the_matrix_info</span><span class="p">;</span>
 </pre></div>
 </div>
-</section>
-<section id="vroom-data">
+</div>
+<div class="section" id="vroom-data">
 <h2>VROOM Data<a class="headerlink" href="#vroom-data" title="Permalink to this heading">¶</a></h2>
-<section id="jobs">
+<div class="section" id="jobs">
 <h3>Jobs<a class="headerlink" href="#jobs" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">vroom</span><span class="o">.</span><span class="n">jobs</span> <span class="p">(</span>
   <span class="nb">id</span> <span class="n">BIGSERIAL</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
@@ -357,8 +238,8 @@ To be able to execute the sample queries, run the following SQL commands to crea
 <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="jobs-time-windows">
+</div>
+<div class="section" id="jobs-time-windows">
 <h3>Jobs Time Windows<a class="headerlink" href="#jobs-time-windows" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">vroom</span><span class="o">.</span><span class="n">jobs_time_windows</span> <span class="p">(</span>
   <span class="nb">id</span> <span class="n">BIGINT</span> <span class="n">REFERENCES</span> <span class="n">vroom</span><span class="o">.</span><span class="n">jobs</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span>
@@ -376,8 +257,8 @@ To be able to execute the sample queries, run the following SQL commands to crea
 <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1025</span><span class="p">,</span> <span class="mi">1775</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="shipments">
+</div>
+<div class="section" id="shipments">
 <h3>Shipments<a class="headerlink" href="#shipments" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">vroom</span><span class="o">.</span><span class="n">shipments</span> <span class="p">(</span>
   <span class="nb">id</span> <span class="n">BIGSERIAL</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
@@ -401,8 +282,8 @@ To be able to execute the sample queries, run the following SQL commands to crea
 <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2250</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2250</span><span class="p">,</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="shipments-time-windows">
+</div>
+<div class="section" id="shipments-time-windows">
 <h3>Shipments Time Windows<a class="headerlink" href="#shipments-time-windows" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">vroom</span><span class="o">.</span><span class="n">shipments_time_windows</span> <span class="p">(</span>
   <span class="nb">id</span> <span class="n">BIGINT</span> <span class="n">REFERENCES</span> <span class="n">vroom</span><span class="o">.</span><span class="n">shipments</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span>
@@ -426,8 +307,8 @@ To be able to execute the sample queries, run the following SQL commands to crea
 <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="mi">18175</span><span class="p">,</span> <span class="mi">19550</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="vehicles">
+</div>
+<div class="section" id="vehicles">
 <h3>Vehicles<a class="headerlink" href="#vehicles" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">vroom</span><span class="o">.</span><span class="n">vehicles</span> <span class="p">(</span>
   <span class="nb">id</span> <span class="n">BIGSERIAL</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
@@ -451,8 +332,8 @@ To be able to execute the sample queries, run the following SQL commands to crea
 <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mi">200</span><span class="p">],</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30900</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="breaks">
+</div>
+<div class="section" id="breaks">
 <h3>Breaks<a class="headerlink" href="#breaks" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">vroom</span><span class="o">.</span><span class="n">breaks</span> <span class="p">(</span>
   <span class="nb">id</span> <span class="n">BIGINT</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
@@ -469,8 +350,8 @@ To be able to execute the sample queries, run the following SQL commands to crea
 <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="breaks-time-windows">
+</div>
+<div class="section" id="breaks-time-windows">
 <h3>Breaks Time Windows<a class="headerlink" href="#breaks-time-windows" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">vroom</span><span class="o">.</span><span class="n">breaks_time_windows</span> <span class="p">(</span>
   <span class="nb">id</span> <span class="n">BIGINT</span> <span class="n">REFERENCES</span> <span class="n">vroom</span><span class="o">.</span><span class="n">breaks</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span>
@@ -487,8 +368,8 @@ To be able to execute the sample queries, run the following SQL commands to crea
 <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="matrix">
+</div>
+<div class="section" id="matrix">
 <h3>Matrix<a class="headerlink" href="#matrix" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">vroom</span><span class="o">.</span><span class="n">matrix</span> <span class="p">(</span>
   <span class="n">start_id</span> <span class="n">BIGINT</span><span class="p">,</span>
@@ -510,9 +391,9 @@ To be able to execute the sample queries, run the following SQL commands to crea
 <span class="n">UPDATE</span> <span class="n">vroom</span><span class="o">.</span><span class="n">matrix</span> <span class="n">SET</span> <span class="n">cost</span> <span class="o">=</span> <span class="n">duration</span><span class="p">;</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="modified-vroom-data">
+</div>
+</div>
+<div class="section" id="modified-vroom-data">
 <h2>Modified VROOM Data<a class="headerlink" href="#modified-vroom-data" title="Permalink to this heading">¶</a></h2>
 <p>The tables created using the above VROOM Data are modified for the VROOM functions
 with timestamps/interval, as:</p>
@@ -532,8 +413,8 @@ with timestamps/interval, as:</p>
 
 </pre></div>
 </div>
-</section>
-<section id="images">
+</div>
+<div class="section" id="images">
 <h2>Images<a class="headerlink" href="#images" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Red arrows correspond when <code class="docutils literal notranslate"><span class="pre">cost</span></code> &gt; 0 in the edge table.</p></li>
@@ -542,29 +423,30 @@ with timestamps/interval, as:</p>
 <li><p>Click on the graph to enlarge.</p></li>
 </ul>
 <p id="fig1">Currently VRP functions work on an undirected graph</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="_images/Fig6-undirected.png" src="_images/Fig6-undirected.png" />
-</figure>
-</section>
-</section>
-
-
-    </div>
-      
-  </div>
 </div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
       
-    </p>
-    <p>
-        &copy; Copyright vrpRouting Contributors - Version v0.4.0-dev.<br/>
-      Last updated on Jul 07, 2022.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br/>
-    </p>
-  </div>
-</footer>
+        <p>
+        «&#160;&#160;<a href="support.html">Support</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="concepts.html">Concepts</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright vrpRouting Contributors - Version v0.4.0-dev.
+      Last updated on Aug 28, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
   </body>
 </html>

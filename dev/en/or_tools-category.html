@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OR-Tools - Category (Experimental) &#8212; vrpRouting Manual (0.4-dev)</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="vrp_knapsack - Experimental" href="knapsack.html" />
+    <link rel="prev" title="vrp_vroomShipmentsPlain - Experimental" href="vrp_vroomShipmentsPlain.html" /> 
+  </head><body>
+      <div class="header" role="banner"><img class="rightlogo" src="_static/vrprouting.png" alt="Logo"/><h1 class="heading"><a href="index.html">
+          <span>vrpRouting Manual (0.4-dev)</span></a></h1>
+        <h2 class="heading"><span>OR-Tools - Category (Experimental)</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="vrp_vroomShipmentsPlain.html">vrp_vroomShipmentsPlain - Experimental</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="knapsack.html">vrp_knapsack - Experimental</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://vrp.pgrouting.org/">Documentation</a> → <a class="reference external" href="https://vrp.pgrouting.org/v0">vrpRouting v0</a></p></li>
+<li><p>Supported Versions
+<a class="reference external" href="https://vrp.pgrouting.org/latest/en/vroom-category.html">Latest</a>
+(<a class="reference external" href="https://vrp.pgrouting.org/v0/en/vroom-category.html">v0</a>)</p></li>
+</ul>
+<div class="section" id="or-tools-category-experimental">
+<h1><a class="toc-backref" href="#id1">OR-Tools - Category (Experimental)</a><a class="headerlink" href="#or-tools-category-experimental" title="Permalink to this heading">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Possible server crash</p>
+<ul class="simple">
+<li><p>These functions might create a server crash</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Experimental functions</p>
+<ul class="simple">
+<li><p>They are not officially of the current release.</p></li>
+<li><p>They likely will not be officially be part of the next release:</p>
+<ul>
+<li><p>The functions might not make use of ANY-INTEGER and ANY-NUMERICAL</p></li>
+<li><p>Name might change.</p></li>
+<li><p>Signature might change.</p></li>
+<li><p>Functionality might change.</p></li>
+<li><p>pgTap tests might be missing.</p></li>
+<li><p>Might need c/c++ coding.</p></li>
+<li><p>May lack documentation.</p></li>
+<li><p>Documentation if any might need to be rewritten.</p></li>
+<li><p>Documentation examples might need to be automatically generated.</p></li>
+<li><p>Might need a lot of feedback from the comunity.</p></li>
+<li><p>Might depend on a proposed function of vrpRouting</p></li>
+<li><p>Might depend on a deprecated function of vrpRouting</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#or-tools-category-experimental" id="id1">OR-Tools - Category (Experimental)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#synopsis" id="id2">Synopsis</a></p>
+<ul>
+<li><p><a class="reference internal" href="#terminologies" id="id3">Terminologies</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#inner-queries" id="id4">Inner Queries</a></p>
+<ul>
+<li><p><a class="reference internal" href="#weights-costs-sql" id="id5">Weights_Costs SQL</a></p></li>
+<li><p><a class="reference internal" href="#weights-sql" id="id6">Weights SQL</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#see-also" id="id7">See Also</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p class="rubric">Functions</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="knapsack.html">vrp_knapsack - Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiple_knapsack.html">vrp_multiple_knapsack - Experimental</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bin_packing.html">vrp_bin_packing - Experimental</a></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id2">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this heading">¶</a></h2>
+<p>OR-Tools is an open source software suite for optimization, tuned for tackling
+the world’s toughest problems in vehicle routing, flows, integer and linear
+programming, and constraint programming.</p>
+<p>OR-Tools can solve</p>
+<ul class="simple">
+<li><p>VR (Vehicle Routing)</p></li>
+<li><p>Scheduling</p></li>
+<li><p>Bin Packing</p></li>
+</ul>
+<p>Currently only Bin Packing problems can be solved with OR-Tools in vrpRouting.</p>
+<div class="section" id="terminologies">
+<h3><a class="toc-backref" href="#id3">Terminologies</a><a class="headerlink" href="#terminologies" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>weight</strong>: For each item, a positive integer weight is associated with it.</p></li>
+<li><p><strong>cost</strong>: For each item, a positive integer cost(value) is associated with it.</p></li>
+<li><p><strong>capacity</strong>: Maximum storage capacity of a knapsack or a bin.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="inner-queries">
+<h2><a class="toc-backref" href="#id4">Inner Queries</a><a class="headerlink" href="#inner-queries" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="weights-costs-sql">
+<h3><a class="toc-backref" href="#id5">Weights_Costs SQL</a><a class="headerlink" href="#weights-costs-sql" title="Permalink to this heading">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement that returns the following columns:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">cost</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 24%" />
+<col style="width: 11%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>id</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ANY-INTEGER</span></code></p></td>
+<td></td>
+<td><p>unique identifier of the item.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>weight</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ANY-INTEGER</span></code></p></td>
+<td></td>
+<td><p>weight of the item.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>cost</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ANY-INTEGER</span></code></p></td>
+<td></td>
+<td><p>cost of the item.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="weights-sql">
+<h3><a class="toc-backref" href="#id6">Weights SQL</a><a class="headerlink" href="#weights-sql" title="Permalink to this heading">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement that returns the following columns:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">,</span> <span class="n">weight</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 24%" />
+<col style="width: 11%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>id</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ANY-INTEGER</span></code></p></td>
+<td></td>
+<td><p>unique identifier of the item.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>weight</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ANY-INTEGER</span></code></p></td>
+<td></td>
+<td><p>weight of the item.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="see-also">
+<h2><a class="toc-backref" href="#id7">See Also</a><a class="headerlink" href="#see-also" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Bin_packing_problem">Wikipedia: Bin Packing problems</a></p></li>
+<li><p><a class="reference external" href="https://developers.google.com/optimization">OR-Tools: Google OR-Tools</a></p></li>
+</ul>
+<p class="rubric">Indices and tables</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="vrp_vroomShipmentsPlain.html">vrp_vroomShipmentsPlain - Experimental</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="knapsack.html">vrp_knapsack - Experimental</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright vrpRouting Contributors - Version v0.4.0-dev.
+      Last updated on Aug 28, 2022.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
+  </body>
+</html>
